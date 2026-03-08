@@ -1,4 +1,42 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Ideas Board</title><link rel="stylesheet" href="/mx-ideas-board-site/_astro/index.CcWTEZqg.css"></head> <body data-astro-cid-5hce7sga>  <div id="gate" data-astro-cid-j7pv25f6> <div class="gate-box" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Ideas Board</h1> <p data-astro-cid-j7pv25f6>Enter passcode to continue</p> <div class="code-input" data-astro-cid-j7pv25f6> <input type="password" id="passcode" maxlength="20" placeholder="passcode" autocomplete="off" data-astro-cid-j7pv25f6> <button id="unlock" data-astro-cid-j7pv25f6>Unlock</button> </div> <p id="error" class="error" data-astro-cid-j7pv25f6></p> </div> </div> <div id="board" style="display:none" data-astro-cid-j7pv25f6> <header data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Ideas Board</h1> <p class="subtitle" data-astro-cid-j7pv25f6>40 ideas across 1 projects</p> </header> <!-- Project tabs --> <nav class="tabs" data-astro-cid-j7pv25f6> <button class="tab active" data-project="all" data-astro-cid-j7pv25f6>All</button> <button class="tab" data-project="new-project" style="--accent: var(--text-muted)" data-astro-cid-j7pv25f6> <span class="tab-dot" data-astro-cid-j7pv25f6></span> new-project <span class="tab-count" data-astro-cid-j7pv25f6>40</span> </button> </nav> <button id="help-toggle" aria-label="Pipeline guide" data-astro-cid-j7pv25f6>?</button> <!-- Help drawer --> <aside id="help-drawer" data-astro-cid-j7pv25f6> <div class="drawer-header" data-astro-cid-j7pv25f6> <h2 data-astro-cid-j7pv25f6>Pipeline Phases</h2> <button id="help-close" aria-label="Close" data-astro-cid-j7pv25f6>&times;</button> </div> <div class="drawer-body" data-astro-cid-j7pv25f6> <h3 class="drawer-section-title" data-astro-cid-j7pv25f6>Phases</h3> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--text-muted)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Raw</strong> <p data-astro-cid-j7pv25f6>Idea captured but not yet evaluated. Needs <code data-astro-cid-j7pv25f6>/pipeline:assess</code> to score viability, costs, and risks.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--someday)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Assessed</strong> <p data-astro-cid-j7pv25f6>Scored and analyzed with revenue model, domain fit, build speed, and evidence. Ready for <code data-astro-cid-j7pv25f6>/pipeline:vet</code> to approve or reject.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--next)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Vetted</strong> <p data-astro-cid-j7pv25f6>Approved and queued for building. Run <code data-astro-cid-j7pv25f6>/pipeline:build</code> to kick off PRD, plan, implement, and deploy.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--now)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Building</strong> <p data-astro-cid-j7pv25f6>Actively being built. The autonomous pipeline is generating PRD, writing code, running tests, and deploying.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--done)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Shipped</strong> <p data-astro-cid-j7pv25f6>Live and deployed. Build complete, accessible at its preview URL.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: #6e7681" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Rejected</strong> <p data-astro-cid-j7pv25f6>Reviewed and decided not to build. Too risky, out of scope, or low priority.</p> </div> </div> <hr data-astro-cid-j7pv25f6> <h3 class="drawer-section-title" data-astro-cid-j7pv25f6>Commands</h3> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:ingest</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Auto-feed ideas from all unread trend reports into the board.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Reads <code data-astro-cid-j7pv25f6>research/docs/reports/index.json</code> to find all report dates</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Scans existing ideas for "from &lt;date&gt; report" footer to find which reports are already ingested</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6>Filters to unread reports only, processes oldest-first</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>For each report, reads the <code data-astro-cid-j7pv25f6>ideas[]</code> array from the JSON</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>Deduplicates against existing titles (case-insensitive, &gt;80% word overlap)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>6</span><span data-astro-cid-j7pv25f6>Scores each idea 1-10 based on viability (high=7-9, medium=5-7, low=3-5), monetization clarity, domain fit, and build speed</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>7</span><span data-astro-cid-j7pv25f6>Writes idea files with full assessment: revenue, domain fit, risks, evidence, validation steps, technical notes</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>8</span><span data-astro-cid-j7pv25f6>One commit covering all reports, then pushes to remote</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Ideas land in <strong data-astro-cid-j7pv25f6>Assessed</strong> phase</p> <p class="cmd-next" data-astro-cid-j7pv25f6>Next: <code data-astro-cid-j7pv25f6>/pipeline:vet all</code></p> </div> </details> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:idea &lt;description&gt;</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Manually capture a new idea from a natural language description, auto-assess it, and add to the board.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Parses the description to infer a title, project, and slug</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Shows parsed result and asks for confirmation</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6>Checks for duplicate titles in existing ideas</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>Runs a full business assessment: revenue potential (50% weight), domain fit (30%), build speed (20%)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>Generates composite score, verdict (Build it / Maybe / Skip)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>6</span><span data-astro-cid-j7pv25f6>Writes idea file with assessment, commits, and pushes</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Ideas land in <strong data-astro-cid-j7pv25f6>Assessed</strong> phase</p> <p class="cmd-next" data-astro-cid-j7pv25f6>Next: <code data-astro-cid-j7pv25f6>/pipeline:vet &lt;slug&gt;</code></p> </div> </details> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:assess &lt;slug&gt;</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Run or re-run a deep business feasibility assessment on an existing idea.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Loads the idea file by slug</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Researches business case: market size, pricing model, realistic 6-month MRR, competitors</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6>Evaluates domain fit: web app? matches SvelteKit/Supabase stack? flags out-of-box items (GPU/ML, native mobile)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>Evaluates build speed: can Claude ship an MVP in days? simplest viable version? major blockers?</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>If existing project, explores the target codebase for patterns and schema</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>6</span><span data-astro-cid-j7pv25f6>Scores 1-10 (revenue 50%, domain fit 30%, build speed 20%), generates verdict</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>7</span><span data-astro-cid-j7pv25f6>Replaces the idea body with full assessment, commits, pushes</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Sets phase to <strong data-astro-cid-j7pv25f6>Assessed</strong></p> <p class="cmd-next" data-astro-cid-j7pv25f6>Next: <code data-astro-cid-j7pv25f6>/pipeline:vet &lt;slug&gt;</code></p> </div> </details> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:vet [slug | all]</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Quick review assessed ideas. Approve, reject, or skip each one.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Loads all ideas with <code data-astro-cid-j7pv25f6>phase: assessed</code>, sorted by score (highest first)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Shows a queue summary with scores, titles, time estimates, and costs</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6>For each idea, shows a one-paragraph summary + score</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>Asks: <strong data-astro-cid-j7pv25f6>approve</strong> (phase&rarr;vetted), <strong data-astro-cid-j7pv25f6>reject</strong> (phase&rarr;rejected), or <strong data-astro-cid-j7pv25f6>skip</strong> (no change)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>Batches all changes into one commit, pushes</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Approved &rarr; <strong data-astro-cid-j7pv25f6>Vetted</strong>, Rejected &rarr; <strong data-astro-cid-j7pv25f6>Rejected</strong></p> <p class="cmd-next" data-astro-cid-j7pv25f6>Next: <code data-astro-cid-j7pv25f6>/pipeline:build &lt;slug&gt;</code></p> </div> </details> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:build &lt;slug&gt; [--auto]</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Autonomous end-to-end build: PRD, plan, implement, test, deploy. Only works on vetted ideas.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Validates idea is in <code data-astro-cid-j7pv25f6>phase: vetted</code>, sets phase to <strong data-astro-cid-j7pv25f6>Building</strong></span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Determines mode: <strong data-astro-cid-j7pv25f6>existing project</strong> (feature branch) or <strong data-astro-cid-j7pv25f6>new project</strong> (scaffold from scratch)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>New projects:</strong> proposes SvelteKit 5 + Supabase + GitHub Pages stack, asks for approval (skipped with <code data-astro-cid-j7pv25f6>--auto</code>), scaffolds repo with tests</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>Generates a focused PRD: problem, user stories, MVP scope, success criteria</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>Plan agent explores codebase, creates implementation plan</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>6</span><span data-astro-cid-j7pv25f6>Implement agent executes each step with unit tests and validation</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>7</span><span data-astro-cid-j7pv25f6>Writes E2E tests for critical user flows (Playwright)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>8</span><span data-astro-cid-j7pv25f6>Full validation: lint + type-check + unit tests + E2E. All must pass.</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>9</span><span data-astro-cid-j7pv25f6>Commits, pushes, deploys to GitHub Pages. Updates idea with preview URL.</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Success &rarr; <strong data-astro-cid-j7pv25f6>Shipped</strong> with preview URL. Failure &rarr; reverts to <strong data-astro-cid-j7pv25f6>Vetted</strong> with error log.</p> <p class="cmd-note" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>--auto</code> skips all user checkpoints for overnight/unattended builds</p> </div> </details> <hr data-astro-cid-j7pv25f6> <h3 class="drawer-section-title" data-astro-cid-j7pv25f6>Workflows</h3> <div class="drawer-workflow" data-astro-cid-j7pv25f6> <div class="wf-row" data-astro-cid-j7pv25f6><span class="wf-label" data-astro-cid-j7pv25f6>After trend report</span><span class="wf-flow" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>ingest</code> &rarr; <code data-astro-cid-j7pv25f6>vet</code> &rarr; <code data-astro-cid-j7pv25f6>build</code></span></div> <div class="wf-row" data-astro-cid-j7pv25f6><span class="wf-label" data-astro-cid-j7pv25f6>Your own idea</span><span class="wf-flow" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>idea</code> &rarr; <code data-astro-cid-j7pv25f6>vet</code> &rarr; <code data-astro-cid-j7pv25f6>build</code></span></div> <div class="wf-row" data-astro-cid-j7pv25f6><span class="wf-label" data-astro-cid-j7pv25f6>Re-evaluate</span><span class="wf-flow" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>assess &lt;slug&gt;</code> &rarr; <code data-astro-cid-j7pv25f6>vet</code></span></div> <div class="wf-row" data-astro-cid-j7pv25f6><span class="wf-label" data-astro-cid-j7pv25f6>Overnight build</span><span class="wf-flow" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>build &lt;slug&gt; --auto</code></span></div> </div> <hr data-astro-cid-j7pv25f6> <h3 class="drawer-section-title" data-astro-cid-j7pv25f6>Scoring</h3> <div class="drawer-scoring" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>Composite score (1-10) based on:</p> <div class="score-row" data-astro-cid-j7pv25f6><span class="score-label" data-astro-cid-j7pv25f6>Revenue potential</span><span class="score-weight" data-astro-cid-j7pv25f6>50%</span></div> <div class="score-row" data-astro-cid-j7pv25f6><span class="score-label" data-astro-cid-j7pv25f6>Domain fit</span><span class="score-weight" data-astro-cid-j7pv25f6>30%</span></div> <div class="score-row" data-astro-cid-j7pv25f6><span class="score-label" data-astro-cid-j7pv25f6>Build speed</span><span class="score-weight" data-astro-cid-j7pv25f6>20%</span></div> <div class="score-verdicts" data-astro-cid-j7pv25f6> <span class="verdict v-build" data-astro-cid-j7pv25f6>7+ Build it</span> <span class="verdict v-maybe" data-astro-cid-j7pv25f6>5-6 Maybe</span> <span class="verdict v-skip" data-astro-cid-j7pv25f6>&lt;5 Skip</span> </div> </div> </div> </aside> <div id="drawer-overlay" data-astro-cid-j7pv25f6></div> <!-- Kanban columns --> <main data-astro-cid-j7pv25f6> <section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--text-muted)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Raw</h2> <span class="count" data-status-count="raw" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--someday)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Assessed</h2> <span class="count" data-status-count="assessed" data-astro-cid-j7pv25f6> 39 </span> </div> <div class="cards" data-astro-cid-j7pv25f6> <article class="card" data-project="new-project" data-id="agent-guard" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AgentGuard</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~2 weeks · $50/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~2 weeks · $50/mo · Build it</p>
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Ideas Board</title><link rel="stylesheet" href="/mx-ideas-board-site/_astro/index.CcWTEZqg.css"></head> <body data-astro-cid-5hce7sga>  <div id="gate" data-astro-cid-j7pv25f6> <div class="gate-box" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Ideas Board</h1> <p data-astro-cid-j7pv25f6>Enter passcode to continue</p> <div class="code-input" data-astro-cid-j7pv25f6> <input type="password" id="passcode" maxlength="20" placeholder="passcode" autocomplete="off" data-astro-cid-j7pv25f6> <button id="unlock" data-astro-cid-j7pv25f6>Unlock</button> </div> <p id="error" class="error" data-astro-cid-j7pv25f6></p> </div> </div> <div id="board" style="display:none" data-astro-cid-j7pv25f6> <header data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Ideas Board</h1> <p class="subtitle" data-astro-cid-j7pv25f6>46 ideas across 1 projects</p> </header> <!-- Project tabs --> <nav class="tabs" data-astro-cid-j7pv25f6> <button class="tab active" data-project="all" data-astro-cid-j7pv25f6>All</button> <button class="tab" data-project="new-project" style="--accent: var(--text-muted)" data-astro-cid-j7pv25f6> <span class="tab-dot" data-astro-cid-j7pv25f6></span> new-project <span class="tab-count" data-astro-cid-j7pv25f6>46</span> </button> </nav> <button id="help-toggle" aria-label="Pipeline guide" data-astro-cid-j7pv25f6>?</button> <!-- Help drawer --> <aside id="help-drawer" data-astro-cid-j7pv25f6> <div class="drawer-header" data-astro-cid-j7pv25f6> <h2 data-astro-cid-j7pv25f6>Pipeline Phases</h2> <button id="help-close" aria-label="Close" data-astro-cid-j7pv25f6>&times;</button> </div> <div class="drawer-body" data-astro-cid-j7pv25f6> <h3 class="drawer-section-title" data-astro-cid-j7pv25f6>Phases</h3> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--text-muted)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Raw</strong> <p data-astro-cid-j7pv25f6>Idea captured but not yet evaluated. Needs <code data-astro-cid-j7pv25f6>/pipeline:assess</code> to score viability, costs, and risks.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--someday)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Assessed</strong> <p data-astro-cid-j7pv25f6>Scored and analyzed with revenue model, domain fit, build speed, and evidence. Ready for <code data-astro-cid-j7pv25f6>/pipeline:vet</code> to approve or reject.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--next)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Vetted</strong> <p data-astro-cid-j7pv25f6>Approved and queued for building. Run <code data-astro-cid-j7pv25f6>/pipeline:build</code> to kick off PRD, plan, implement, and deploy.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--now)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Building</strong> <p data-astro-cid-j7pv25f6>Actively being built. The autonomous pipeline is generating PRD, writing code, running tests, and deploying.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: var(--done)" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Shipped</strong> <p data-astro-cid-j7pv25f6>Live and deployed. Build complete, accessible at its preview URL.</p> </div> </div> <div class="phase-item" data-astro-cid-j7pv25f6> <span class="phase-dot" style="background: #6e7681" data-astro-cid-j7pv25f6></span> <div data-astro-cid-j7pv25f6> <strong data-astro-cid-j7pv25f6>Rejected</strong> <p data-astro-cid-j7pv25f6>Reviewed and decided not to build. Too risky, out of scope, or low priority.</p> </div> </div> <hr data-astro-cid-j7pv25f6> <h3 class="drawer-section-title" data-astro-cid-j7pv25f6>Commands</h3> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:ingest</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Auto-feed ideas from all unread trend reports into the board.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Reads <code data-astro-cid-j7pv25f6>research/docs/reports/index.json</code> to find all report dates</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Scans existing ideas for "from &lt;date&gt; report" footer to find which reports are already ingested</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6>Filters to unread reports only, processes oldest-first</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>For each report, reads the <code data-astro-cid-j7pv25f6>ideas[]</code> array from the JSON</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>Deduplicates against existing titles (case-insensitive, &gt;80% word overlap)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>6</span><span data-astro-cid-j7pv25f6>Scores each idea 1-10 based on viability (high=7-9, medium=5-7, low=3-5), monetization clarity, domain fit, and build speed</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>7</span><span data-astro-cid-j7pv25f6>Writes idea files with full assessment: revenue, domain fit, risks, evidence, validation steps, technical notes</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>8</span><span data-astro-cid-j7pv25f6>One commit covering all reports, then pushes to remote</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Ideas land in <strong data-astro-cid-j7pv25f6>Assessed</strong> phase</p> <p class="cmd-next" data-astro-cid-j7pv25f6>Next: <code data-astro-cid-j7pv25f6>/pipeline:vet all</code></p> </div> </details> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:idea &lt;description&gt;</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Manually capture a new idea from a natural language description, auto-assess it, and add to the board.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Parses the description to infer a title, project, and slug</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Shows parsed result and asks for confirmation</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6>Checks for duplicate titles in existing ideas</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>Runs a full business assessment: revenue potential (50% weight), domain fit (30%), build speed (20%)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>Generates composite score, verdict (Build it / Maybe / Skip)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>6</span><span data-astro-cid-j7pv25f6>Writes idea file with assessment, commits, and pushes</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Ideas land in <strong data-astro-cid-j7pv25f6>Assessed</strong> phase</p> <p class="cmd-next" data-astro-cid-j7pv25f6>Next: <code data-astro-cid-j7pv25f6>/pipeline:vet &lt;slug&gt;</code></p> </div> </details> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:assess &lt;slug&gt;</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Run or re-run a deep business feasibility assessment on an existing idea.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Loads the idea file by slug</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Researches business case: market size, pricing model, realistic 6-month MRR, competitors</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6>Evaluates domain fit: web app? matches SvelteKit/Supabase stack? flags out-of-box items (GPU/ML, native mobile)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>Evaluates build speed: can Claude ship an MVP in days? simplest viable version? major blockers?</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>If existing project, explores the target codebase for patterns and schema</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>6</span><span data-astro-cid-j7pv25f6>Scores 1-10 (revenue 50%, domain fit 30%, build speed 20%), generates verdict</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>7</span><span data-astro-cid-j7pv25f6>Replaces the idea body with full assessment, commits, pushes</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Sets phase to <strong data-astro-cid-j7pv25f6>Assessed</strong></p> <p class="cmd-next" data-astro-cid-j7pv25f6>Next: <code data-astro-cid-j7pv25f6>/pipeline:vet &lt;slug&gt;</code></p> </div> </details> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:vet [slug | all]</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Quick review assessed ideas. Approve, reject, or skip each one.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Loads all ideas with <code data-astro-cid-j7pv25f6>phase: assessed</code>, sorted by score (highest first)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Shows a queue summary with scores, titles, time estimates, and costs</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6>For each idea, shows a one-paragraph summary + score</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>Asks: <strong data-astro-cid-j7pv25f6>approve</strong> (phase&rarr;vetted), <strong data-astro-cid-j7pv25f6>reject</strong> (phase&rarr;rejected), or <strong data-astro-cid-j7pv25f6>skip</strong> (no change)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>Batches all changes into one commit, pushes</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Approved &rarr; <strong data-astro-cid-j7pv25f6>Vetted</strong>, Rejected &rarr; <strong data-astro-cid-j7pv25f6>Rejected</strong></p> <p class="cmd-next" data-astro-cid-j7pv25f6>Next: <code data-astro-cid-j7pv25f6>/pipeline:build &lt;slug&gt;</code></p> </div> </details> <details class="cmd-details" data-astro-cid-j7pv25f6> <summary data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>/pipeline:build &lt;slug&gt; [--auto]</code></summary> <div class="cmd-body" data-astro-cid-j7pv25f6> <p class="cmd-desc" data-astro-cid-j7pv25f6>Autonomous end-to-end build: PRD, plan, implement, test, deploy. Only works on vetted ideas.</p> <div class="cmd-steps" data-astro-cid-j7pv25f6> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>1</span><span data-astro-cid-j7pv25f6>Validates idea is in <code data-astro-cid-j7pv25f6>phase: vetted</code>, sets phase to <strong data-astro-cid-j7pv25f6>Building</strong></span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>2</span><span data-astro-cid-j7pv25f6>Determines mode: <strong data-astro-cid-j7pv25f6>existing project</strong> (feature branch) or <strong data-astro-cid-j7pv25f6>new project</strong> (scaffold from scratch)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>3</span><span data-astro-cid-j7pv25f6><strong data-astro-cid-j7pv25f6>New projects:</strong> proposes SvelteKit 5 + Supabase + GitHub Pages stack, asks for approval (skipped with <code data-astro-cid-j7pv25f6>--auto</code>), scaffolds repo with tests</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>4</span><span data-astro-cid-j7pv25f6>Generates a focused PRD: problem, user stories, MVP scope, success criteria</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>5</span><span data-astro-cid-j7pv25f6>Plan agent explores codebase, creates implementation plan</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>6</span><span data-astro-cid-j7pv25f6>Implement agent executes each step with unit tests and validation</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>7</span><span data-astro-cid-j7pv25f6>Writes E2E tests for critical user flows (Playwright)</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>8</span><span data-astro-cid-j7pv25f6>Full validation: lint + type-check + unit tests + E2E. All must pass.</span></div> <div class="cmd-step" data-astro-cid-j7pv25f6><span class="step-num" data-astro-cid-j7pv25f6>9</span><span data-astro-cid-j7pv25f6>Commits, pushes, deploys to GitHub Pages. Updates idea with preview URL.</span></div> </div> <p class="cmd-output" data-astro-cid-j7pv25f6>Success &rarr; <strong data-astro-cid-j7pv25f6>Shipped</strong> with preview URL. Failure &rarr; reverts to <strong data-astro-cid-j7pv25f6>Vetted</strong> with error log.</p> <p class="cmd-note" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>--auto</code> skips all user checkpoints for overnight/unattended builds</p> </div> </details> <hr data-astro-cid-j7pv25f6> <h3 class="drawer-section-title" data-astro-cid-j7pv25f6>Workflows</h3> <div class="drawer-workflow" data-astro-cid-j7pv25f6> <div class="wf-row" data-astro-cid-j7pv25f6><span class="wf-label" data-astro-cid-j7pv25f6>After trend report</span><span class="wf-flow" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>ingest</code> &rarr; <code data-astro-cid-j7pv25f6>vet</code> &rarr; <code data-astro-cid-j7pv25f6>build</code></span></div> <div class="wf-row" data-astro-cid-j7pv25f6><span class="wf-label" data-astro-cid-j7pv25f6>Your own idea</span><span class="wf-flow" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>idea</code> &rarr; <code data-astro-cid-j7pv25f6>vet</code> &rarr; <code data-astro-cid-j7pv25f6>build</code></span></div> <div class="wf-row" data-astro-cid-j7pv25f6><span class="wf-label" data-astro-cid-j7pv25f6>Re-evaluate</span><span class="wf-flow" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>assess &lt;slug&gt;</code> &rarr; <code data-astro-cid-j7pv25f6>vet</code></span></div> <div class="wf-row" data-astro-cid-j7pv25f6><span class="wf-label" data-astro-cid-j7pv25f6>Overnight build</span><span class="wf-flow" data-astro-cid-j7pv25f6><code data-astro-cid-j7pv25f6>build &lt;slug&gt; --auto</code></span></div> </div> <hr data-astro-cid-j7pv25f6> <h3 class="drawer-section-title" data-astro-cid-j7pv25f6>Scoring</h3> <div class="drawer-scoring" data-astro-cid-j7pv25f6> <p data-astro-cid-j7pv25f6>Composite score (1-10) based on:</p> <div class="score-row" data-astro-cid-j7pv25f6><span class="score-label" data-astro-cid-j7pv25f6>Revenue potential</span><span class="score-weight" data-astro-cid-j7pv25f6>50%</span></div> <div class="score-row" data-astro-cid-j7pv25f6><span class="score-label" data-astro-cid-j7pv25f6>Domain fit</span><span class="score-weight" data-astro-cid-j7pv25f6>30%</span></div> <div class="score-row" data-astro-cid-j7pv25f6><span class="score-label" data-astro-cid-j7pv25f6>Build speed</span><span class="score-weight" data-astro-cid-j7pv25f6>20%</span></div> <div class="score-verdicts" data-astro-cid-j7pv25f6> <span class="verdict v-build" data-astro-cid-j7pv25f6>7+ Build it</span> <span class="verdict v-maybe" data-astro-cid-j7pv25f6>5-6 Maybe</span> <span class="verdict v-skip" data-astro-cid-j7pv25f6>&lt;5 Skip</span> </div> </div> </div> </aside> <div id="drawer-overlay" data-astro-cid-j7pv25f6></div> <!-- Kanban columns --> <main data-astro-cid-j7pv25f6> <section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--text-muted)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Raw</h2> <span class="count" data-status-count="raw" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--someday)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Assessed</h2> <span class="count" data-status-count="assessed" data-astro-cid-j7pv25f6> 45 </span> </div> <div class="cards" data-astro-cid-j7pv25f6> <article class="card" data-project="new-project" data-id="skill-forge" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>SkillForge</h3> <p class="body-preview" data-astro-cid-j7pv25f6>9/10 · ~1 week · $15/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>9/10 · ~1 week · $15/mo · Build it</p>
+<p>The AI coding tool plugin ecosystem is exploding on two competing fronts: openai/skills (13K stars, +948/day) for Codex and claude-skills (2.7K, +598/week) for Claude Code. There&#39;s no unified marketplace to discover, compare, and install skills across tools — each ecosystem reinvents the wheel.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free registry with community plugins, $15/mo for premium plugins (enterprise templates, specialized workflows), $49/mo for teams with shared configurations and compatibility guarantees.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 1 week to MVP, low complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Two competing ecosystems (OpenAI + Anthropic) with no cross-platform bridge</li>
+<li>Claude Code ecosystem trending 3 consecutive days with strong signal</li>
+<li>Low complexity — core is file management and format translation</li>
+<li>Fastest to MVP of any idea in this batch (1 week)</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>OpenAI or Anthropic could build official cross-platform support</li>
+<li>Plugin/skill formats may diverge rapidly, making adapters fragile</li>
+<li>Marketplace adoption requires critical mass of quality plugins</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://github.com/openai/skills">OpenAI Skills Catalog for Codex (13K stars, +948/day)</a></li>
+<li><a href="https://github.com/alirezarezvani/claude-skills">claude-skills — 169 production-ready skills for Claude Code (2.7K stars, +598/week)</a></li>
+<li><a href="https://github.com/superset-sh/superset">Superset — IDE for Claude Code &amp; Codex era (5.7K stars, +3193/week)</a></li>
+<li><a href="https://github.com/shareAI-lab/learn-claude-code">Learn Claude Code — build agents from scratch (23.5K stars, +953/day)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Create a GitHub repo with 30 curated skills that work across Claude Code and Codex, share in both communities</li>
+<li>Post in r/ClaudeAI and r/OpenAI: &#39;What&#39;s your AI coding tool setup? Share your favorite skills/plugins&#39;</li>
+<li>Build a simple CLI that installs skills from a registry with cross-platform support and share as Show HN</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: CLI tool, Web app, Database
+Complexity: low
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-08 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="agent-guard" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AgentGuard</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~2 weeks · $50/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~2 weeks · $50/mo · Build it</p>
 <p>AI coding tools write more production code than ever but trust is the bottleneck. The community is converging on specs-first approaches (242pts HN), and products like Vet (111 votes PH) and Context Gateway (209 votes PH) validate demand. Theme strong for 4 consecutive days.</p>
 <hr>
 <h2>Assessment</h2>
@@ -35,6 +73,80 @@
 Complexity: medium
 AI build viability: high</p>
 <p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="agent-ops" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AgentOps</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~2 weeks · $30/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~2 weeks · $30/mo · Build it</p>
+<p>Building AI tools now takes hours, not months — the value has moved to operating and monitoring them. &#39;The real AI gold rush isn&#39;t in building, it&#39;s in babysitting&#39; (230 upvotes, 123 comments r/Entrepreneur). Indie devs running AI products need lightweight ops tooling, not enterprise Datadog.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free for 1 product with basic monitoring, $19/mo for 3 products with AI quality scoring, $59/mo for unlimited with cost optimization and alerting.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Sharp pain point validated by massive Reddit engagement — founders know operating &gt; building</li>
+<li>No Datadog-equivalent exists for solo devs running AI products at indie price points</li>
+<li>AI quality drift is a real, unsolved problem as more products ship AI-generated outputs</li>
+<li>Straightforward CRUD + structured logging architecture</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Monitoring is a crowded market — Datadog, Sentry, etc. may add AI-specific features</li>
+<li>Indie devs are cost-sensitive and may build their own monitoring</li>
+<li>Quality scoring for AI outputs is subjective and hard to generalize</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://reddit.com/r/Entrepreneur/comments/1rnfgee">The real AI gold rush isn&#39;t in building — it&#39;s in babysitting (230 upvotes, 123 comments)</a></li>
+<li><a href="https://reddit.com/r/SaaS/comments/1rnaefi">Sold my SaaS for $6M — customer concentration and founder dependency mattered most (418 upvotes)</a></li>
+<li><a href="https://reddit.com/r/SaaS/comments/1rnuo5s">Killed my main feature at 50 users — best decision I made (9 upvotes)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=47291123">Autoresearch: Agents researching automatically on single GPUs (123pts HN)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Reply to the &#39;AI gold rush is in babysitting&#39; thread: &#39;What does your AI agent monitoring setup look like?&#39;</li>
+<li>Post in r/SideProject: &#39;How do you monitor your AI-powered products? I&#39;m building a lightweight ops dashboard&#39;</li>
+<li>Offer free monitoring for 20 indie AI products and collect feedback for 2 weeks</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, Auth, AI/LLM API, Background jobs
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-08 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="agent-test-kit" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AgentTestKit</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~2 weeks · $30/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~2 weeks · $30/mo · Build it</p>
+<p>Companies deploying AI chatbots and voice agents have no systematic way to test them. Cekura (YC F24) proves market demand, but there&#39;s room for a lightweight open-core alternative that solo devs can self-host.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Open-core: free CLI, $49/mo hosted with dashboards, $199/mo teams with regression tracking.
+<strong>Domain fit</strong>: Web app + CLI — core expertise
+<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>YC-backed competitor validates market, open-core positioning differentiates</li>
+<li>YAML test specs + CLI is a developer-friendly approach</li>
+<li>Theme trending 2 consecutive days with multiple signals</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Cekura has YC backing and first-mover advantage</li>
+<li>LLM-as-judge for hallucination scoring needs careful calibration</li>
+<li>Agent testing is inherently flaky</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47232903">Launch HN: Cekura (YC F24) – Testing for voice and chat AI agents</a></li>
+<li><a href="https://news.ycombinator.com/item?id=47243272">Agentic Engineering Patterns</a></li>
+<li><a href="https://www.producthunt.com/posts/dialoglab">DialogLab - Testing human-AI group conversations</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Post in r/ChatGPT and r/LocalLLaMA: &#39;How do you test your AI agents before deploying?&#39;</li>
+<li>Build a CLI prototype that tests a sample chatbot and share on HN</li>
+<li>Cold DM 10 companies from the Cekura Launch HN thread</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, AI/LLM API, Background jobs
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-04 report</p>
 </div> </article><article class="card" data-project="new-project" data-id="agent-mem" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AgentMem</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~1-2 weeks · $25/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~1-2 weeks · $25/mo · Build it</p>
 <p>AI agents forget everything between sessions. DeerFlow (&#39;SuperAgent with memories&#39;) trending 4th day (+3480/week). hermes-agent (&#39;grows with you&#39;, +964/week). Every agent framework needs a memory layer but none ship one. The gap is widening as adoption accelerates.</p>
 <hr>
@@ -72,42 +184,6 @@ AI build viability: high</p>
 Complexity: medium
 AI build viability: high</p>
 <p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
-</div> </article><article class="card" data-project="new-project" data-id="agent-test-kit" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AgentTestKit</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~2 weeks · $30/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~2 weeks · $30/mo · Build it</p>
-<p>Companies deploying AI chatbots and voice agents have no systematic way to test them. Cekura (YC F24) proves market demand, but there&#39;s room for a lightweight open-core alternative that solo devs can self-host.</p>
-<hr>
-<h2>Assessment</h2>
-<p><strong>Revenue</strong>: Open-core: free CLI, $49/mo hosted with dashboards, $199/mo teams with regression tracking.
-<strong>Domain fit</strong>: Web app + CLI — core expertise
-<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
-<h3>Why build</h3>
-<ul>
-<li>YC-backed competitor validates market, open-core positioning differentiates</li>
-<li>YAML test specs + CLI is a developer-friendly approach</li>
-<li>Theme trending 2 consecutive days with multiple signals</li>
-</ul>
-<h3>Risks</h3>
-<ul>
-<li>Cekura has YC backing and first-mover advantage</li>
-<li>LLM-as-judge for hallucination scoring needs careful calibration</li>
-<li>Agent testing is inherently flaky</li>
-</ul>
-<h3>Evidence</h3>
-<ul>
-<li><a href="https://news.ycombinator.com/item?id=47232903">Launch HN: Cekura (YC F24) – Testing for voice and chat AI agents</a></li>
-<li><a href="https://news.ycombinator.com/item?id=47243272">Agentic Engineering Patterns</a></li>
-<li><a href="https://www.producthunt.com/posts/dialoglab">DialogLab - Testing human-AI group conversations</a></li>
-</ul>
-<h3>Validation Steps</h3>
-<ul>
-<li>Post in r/ChatGPT and r/LocalLLaMA: &#39;How do you test your AI agents before deploying?&#39;</li>
-<li>Build a CLI prototype that tests a sample chatbot and share on HN</li>
-<li>Cold DM 10 companies from the Cekura Launch HN thread</li>
-</ul>
-<h3>Technical Notes</h3>
-<p>Stack: Web app, Database, AI/LLM API, Background jobs
-Complexity: medium
-AI build viability: high</p>
-<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-04 report</p>
 </div> </article><article class="card" data-project="new-project" data-id="csv-dash" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>CSVDash</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~1 weekend · $10/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~1 weekend · $10/mo · Build it</p>
 <p>Business users have CSV files full of valuable data but no way to quickly visualize or share insights without SQL or BI tools. Upsolve AI (100 votes PH) validates this need.</p>
 <hr>
@@ -142,6 +218,81 @@ AI build viability: high</p>
 Complexity: low
 AI build viability: high</p>
 <p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-04 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="file-agent" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>FileAgent</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~1-2 weeks · $15/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~1-2 weeks · $15/mo · Build it</p>
+<p>The filesystem-as-interface paradigm is gaining traction — &#39;Files are the interface humans and agents interact with&#39; (229pts, 122 comments HN). Claude Code already works this way with CLAUDE.md, and OpenClaw (278K stars) validates it at scale. But there&#39;s no framework to make file-based agent workflows easy and composable.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Open-core: free CLI for local use, $19/mo for cloud sync and team workspaces, $79/mo for enterprise with audit trails and access control.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 1-2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Emerging paradigm validated by massive HN engagement (229pts) and OpenClaw&#39;s explosive growth</li>
+<li>Convention-over-configuration design for agent workflows is an unsolved gap</li>
+<li>Aligns perfectly with Claude Code and CLAUDE.md patterns already in use</li>
+<li>Theme emerging — first day spotted, early mover advantage</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>&quot;Files as interface&quot; may stay niche if GUI-based agent tools dominate</li>
+<li>OpenClaw could add this capability natively, absorbing the market</li>
+<li>Adoption depends on developers embracing a new workflow pattern</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47286408">Files are the interface humans and agents interact with (229pts, 122 comments)</a></li>
+<li><a href="https://github.com/openclaw/openclaw">OpenClaw — personal AI assistant, any OS, any platform (278K stars, +4777/day)</a></li>
+<li><a href="https://github.com/shareAI-lab/learn-claude-code">Learn Claude Code — build agents from scratch (23.5K stars, +953/day)</a></li>
+<li><a href="https://reddit.com/r/SideProject/comments/1rnbni9">Pixel-art interface for AI agents — gamified file-based agent interaction (67 upvotes)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Reply to the &#39;Files are the interface&#39; HN thread with a prototype CLI and gauge interest</li>
+<li>Build a simple file-watcher that triggers Claude API on new files in a directory and share as Show HN</li>
+<li>Post in r/SideProject: &#39;I made a tool that turns any folder into an AI agent workspace&#39;</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: CLI tool, AI/LLM API, Web app
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-08 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="meeting-burn" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>MeetingBurn</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~1 week · $15/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~1 week · $15/mo · Build it</p>
+<p>A real-time meeting cost ticker hit 71 upvotes on r/webdev — engineers resonate with quantifying meeting waste. Combined with founder anxiety about time allocation (&#39;took a two-week vacation and nothing broke&#39;, 119 upvotes), there&#39;s a sharp pain point for engineering leaders around meeting ROI.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free for individual time audit, $15/mo for team analytics, $49/mo for enterprise with calendar integration and meeting optimization recommendations.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 1 week to MVP, low complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Visceral pain point — engineers and founders immediately understand meeting cost waste</li>
+<li>Low complexity, fast to MVP — straightforward CRUD with calendar integration</li>
+<li>AI-powered meeting purpose classification adds intelligent differentiation</li>
+<li>Meeting-free block optimizer protects deep work — clear value proposition</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Existing tools (Clockwise, Reclaim.ai) have calendar optimization features</li>
+<li>Calendar API integrations (Google, Outlook) add OAuth complexity</li>
+<li>Teams may resist having meetings scored and ranked</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://reddit.com/r/webdev/comments/1rndqbp">Real-time meeting cost ticker — &#39;classic engineer move&#39; (71 upvotes)</a></li>
+<li><a href="https://reddit.com/r/Entrepreneur/comments/1rmw58w">Took a two-week vacation. Nothing broke. That was terrifying. (22 upvotes, 35 comments)</a></li>
+<li><a href="https://reddit.com/r/Entrepreneur/comments/1rm9so0">Took a 10-day vacation and nothing broke. That scared me more. (119 upvotes, 50 comments)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Reply to the meeting cost ticker thread: &#39;Would you pay for a tool that identifies your most wasteful meetings?&#39;</li>
+<li>Build a free Google Calendar analyzer that shows time-in-meetings vs deep-work and share in r/webdev</li>
+<li>Post in r/ExperiencedDevs: &#39;How do you protect your team from meeting overload?&#39;</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, Auth, AI/LLM API
+Complexity: low
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-08 report</p>
 </div> </article><article class="card" data-project="new-project" data-id="post-pulse" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>PostPulse</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~3-5 days · $0-20/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~3-5 days · $0-20/mo · Build it</p>
 <p>Indie hackers post product launches randomly on Reddit and get zero engagement. Typical r/SideProject post gets 1 upvote and 0 comments despite 661 posts/day. Getting customers from Reddit without being spammy is a constant struggle.</p>
 <hr>
@@ -356,6 +507,43 @@ AI build viability: high</p>
 Complexity: medium
 AI build viability: high</p>
 <p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="cloud-pick" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>CloudPick</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~1-2 weeks · $20/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~1-2 weeks · $20/mo · Build it</p>
+<p>Cloud VM benchmarks 2026 (251pts, 113 comments HN) is the highest-scoring technical post today — developers are actively comparing cloud costs and performance. Indie devs running AI products need to optimize infrastructure costs, but choosing the right provider is harder than ever.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free comparisons with basic benchmarks, $19/mo for AI-specific benchmarks and cost projections, $49/mo for teams with migration guides and continuous monitoring.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 1-2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Highest-scoring technical post of the day validates strong developer demand</li>
+<li>AI workload cost optimization is a new, underserved niche</li>
+<li>Data curation is the moat — hard for competitors to replicate quickly</li>
+<li>Natural language workload description is a compelling UX differentiator</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Data curation (gathering reliable benchmarks) is ongoing, labor-intensive work</li>
+<li>Cloud providers change pricing frequently, requiring constant updates</li>
+<li>Incumbents (CloudOptimizer, Infracost) may add AI-specific features</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47293119">Cloud VM benchmarks 2026 — performance vs price comparison (251pts, 113 comments)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=47289311">A decade of Docker containers — infrastructure maturity (310pts, 208 comments)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=47292522">How to run Qwen 3.5 locally — running models on consumer hardware (190pts, 54 comments)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Reply to the cloud VM benchmarks HN thread: &#39;Would a tool that auto-recommends the cheapest provider for your workload be useful?&#39;</li>
+<li>Build a free comparison page for AI inference costs across 5 providers and share on HN</li>
+<li>Post in r/selfhosted: &#39;What&#39;s your cloud cost optimization strategy for AI workloads?&#39;</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, AI/LLM API
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-08 report</p>
 </div> </article><article class="card" data-project="new-project" data-id="course-agent" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>CourseAgent</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~2 weeks · $35/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~2 weeks · $35/mo · Build it</p>
 <p>Coursekit (105 votes PH) validates that course creators want to package expertise as interactive AI experiences. But Coursekit is the platform — there&#39;s an opportunity for the template/toolkit layer that works with any LLM.</p>
 <hr>
@@ -886,42 +1074,6 @@ AI build viability: high</p>
 Complexity: medium
 AI build viability: high</p>
 <p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
-</div> </article><article class="card" data-project="new-project" data-id="voice-forge" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>VoiceForge</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~2 weeks · $30/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~2 weeks · $30/mo · Build it</p>
-<p>Developers building voice apps stuck between expensive cloud APIs and clunky self-hosted models. Nvidia PersonaPlex 7B now runs full-duplex speech-to-speech on Apple Silicon. AssemblyAI launched streaming ASR. Moonshine trending 3rd day.</p>
-<hr>
-<h2>Assessment</h2>
-<p><strong>Revenue</strong>: Freemium: free 1000 min/mo, $39/mo unlimited multi-provider, $149/mo teams with custom hosting.
-<strong>Domain fit</strong>: CLI/SDK — close to core expertise
-<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
-<h3>Why build</h3>
-<ul>
-<li>Unified SDK abstracting multiple providers is a strong developer UX</li>
-<li>Auto-selects best provider based on latency, cost, and device — clear value</li>
-<li>Theme trending 3 consecutive days with accelerating signal</li>
-</ul>
-<h3>Risks</h3>
-<ul>
-<li>Real-time audio streaming across different provider protocols is hard</li>
-<li>Provider APIs change frequently — maintenance burden</li>
-<li>Deepgram and AssemblyAI have their own multi-model offerings</li>
-</ul>
-<h3>Evidence</h3>
-<ul>
-<li><a href="https://news.ycombinator.com/item?id=47258801">Nvidia PersonaPlex 7B on Apple Silicon: Full-Duplex Speech-to-Speech (114pts)</a></li>
-<li><a href="https://www.producthunt.com/posts/assemblyai">AssemblyAI Universal-3 Pro Streaming (106 votes)</a></li>
-<li><a href="https://www.producthunt.com/posts/vocova">Vocova - Transcribe from 1000+ platforms (138 votes)</a></li>
-</ul>
-<h3>Validation Steps</h3>
-<ul>
-<li>Post in r/MachineLearning: &#39;Which speech API do you use and what&#39;s your biggest frustration?&#39;</li>
-<li>Build a comparison demo: cloud Whisper vs local Moonshine vs PersonaPlex latency</li>
-<li>DM 10 developers building voice features on Twitter/X</li>
-</ul>
-<h3>Technical Notes</h3>
-<p>Stack: CLI tool, Web app, AI/LLM API
-Complexity: medium
-AI build viability: high</p>
-<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-05 report</p>
 </div> </article><article class="card" data-project="new-project" data-id="writer-forge" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>WriterForge</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~1 week · $15/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~1 week · $15/mo · Build it</p>
 <p>Claude Code being repurposed for non-code creative work. webnovel-writer (+291 stars today) solves forgetting in 2M+ character serialized fiction. SEOMachine (+378 today) does the same for marketing content. These prove Claude Code&#39;s agent loop is valuable beyond coding.</p>
 <hr>
@@ -958,6 +1110,79 @@ AI build viability: high</p>
 Complexity: low
 AI build viability: high</p>
 <p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="voice-forge" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>VoiceForge</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~2 weeks · $30/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~2 weeks · $30/mo · Build it</p>
+<p>Developers building voice apps stuck between expensive cloud APIs and clunky self-hosted models. Nvidia PersonaPlex 7B now runs full-duplex speech-to-speech on Apple Silicon. AssemblyAI launched streaming ASR. Moonshine trending 3rd day.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free 1000 min/mo, $39/mo unlimited multi-provider, $149/mo teams with custom hosting.
+<strong>Domain fit</strong>: CLI/SDK — close to core expertise
+<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Unified SDK abstracting multiple providers is a strong developer UX</li>
+<li>Auto-selects best provider based on latency, cost, and device — clear value</li>
+<li>Theme trending 3 consecutive days with accelerating signal</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Real-time audio streaming across different provider protocols is hard</li>
+<li>Provider APIs change frequently — maintenance burden</li>
+<li>Deepgram and AssemblyAI have their own multi-model offerings</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47258801">Nvidia PersonaPlex 7B on Apple Silicon: Full-Duplex Speech-to-Speech (114pts)</a></li>
+<li><a href="https://www.producthunt.com/posts/assemblyai">AssemblyAI Universal-3 Pro Streaming (106 votes)</a></li>
+<li><a href="https://www.producthunt.com/posts/vocova">Vocova - Transcribe from 1000+ platforms (138 votes)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Post in r/MachineLearning: &#39;Which speech API do you use and what&#39;s your biggest frustration?&#39;</li>
+<li>Build a comparison demo: cloud Whisper vs local Moonshine vs PersonaPlex latency</li>
+<li>DM 10 developers building voice features on Twitter/X</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: CLI tool, Web app, AI/LLM API
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-05 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="auto-research-kit" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AutoResearchKit</h3> <p class="body-preview" data-astro-cid-j7pv25f6>6/10 · ~2 weeks · $20/mo · Maybe</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>6/10 · ~2 weeks · $20/mo · Maybe</p>
+<p>Karpathy&#39;s autoresearch (123pts HN) shows agents conducting research on single-GPU setups. MiroFish (6.2K stars, +399/day) applies swarm intelligence to research. The research workflow is ripe for agent automation, but existing tools are enterprise-priced or require GPU clusters.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Open-core: free CLI for local use, $29/mo for cloud-augmented research (access to larger models and more data sources), $99/mo for teams with shared research libraries and collaboration.
+<strong>Domain fit</strong>: Out-of-box — requires GPU/ML infra expertise
+<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Karpathy&#39;s validation (123pts HN) shows strong developer interest in automated research</li>
+<li>Generalizing beyond ML to market research and competitive analysis broadens the audience</li>
+<li>Open-core model with local-first approach aligns with local AI trend</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Making research loops reliable enough to produce useful output is the hard engineering challenge</li>
+<li>GPU/ML infra is outside core web app expertise</li>
+<li>Medium viability — harder to execute than other ideas in this batch</li>
+<li>Competing with well-funded academic tools and Google&#39;s research capabilities</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47291123">Autoresearch: Agents researching on single-GPU nanochat training (123pts, 33 comments)</a></li>
+<li><a href="https://github.com/666ghj/MiroFish">MiroFish — Swarm Intelligence Engine for predicting anything (6.2K stars, +399/day)</a></li>
+<li><a href="https://github.com/karpathy/autoresearch">Karpathy&#39;s autoresearch repository</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Reply to the autoresearch HN thread: &#39;What if this worked for market research, not just ML experiments?&#39;</li>
+<li>Build a CLI that takes a research question and generates a structured report using web search + local model, share as Show HN</li>
+<li>Post in r/MachineLearning: &#39;How do you automate your research workflow?&#39;</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: CLI tool, AI/LLM API, GPU/ML infra
+Complexity: medium
+AI build viability: medium</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-08 report</p>
 </div> </article><article class="card" data-project="new-project" data-id="clip-forge" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>ClipForge</h3> <p class="body-preview" data-astro-cid-j7pv25f6>6/10 · ~2-3 weeks · $30-80/mo · Maybe</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>6/10 · ~2-3 weeks · $30-80/mo · Maybe</p>
 <p>Video AI tools have massive demand (300K+ users) but workflow is manual and fragmented. Creators need to manually chain tools to go from long video to edited short-form clips.</p>
 <hr>
