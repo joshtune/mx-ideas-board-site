@@ -1,1 +1,441 @@
-<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Ideas Board</title><link rel="stylesheet" href="/mx-ideas-board-site/_astro/index.CQuxD6kt.css"></head> <body data-astro-cid-5hce7sga>  <div id="gate" data-astro-cid-j7pv25f6> <div class="gate-box" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Ideas Board</h1> <p data-astro-cid-j7pv25f6>Enter passcode to continue</p> <div class="code-input" data-astro-cid-j7pv25f6> <input type="password" id="passcode" maxlength="20" placeholder="passcode" autocomplete="off" data-astro-cid-j7pv25f6> <button id="unlock" data-astro-cid-j7pv25f6>Unlock</button> </div> <p id="error" class="error" data-astro-cid-j7pv25f6></p> </div> </div> <div id="board" style="display:none" data-astro-cid-j7pv25f6> <header data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Ideas Board</h1> <p class="subtitle" data-astro-cid-j7pv25f6>0 ideas across 0 projects</p> </header> <!-- Project tabs --> <nav class="tabs" data-astro-cid-j7pv25f6> <button class="tab active" data-project="all" data-astro-cid-j7pv25f6>All</button>  </nav> <!-- Kanban columns --> <main data-astro-cid-j7pv25f6> <section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--now)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Now</h2> <span class="count" data-status-count="now" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--next)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Next</h2> <span class="count" data-status-count="next" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--someday)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Someday</h2> <span class="count" data-status-count="someday" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--done)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Done</h2> <span class="count" data-status-count="done" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section> </main> </div>  </body></html> <script type="module">const i="eitaaio",a="ideas-board-auth";function l(){const t=document.getElementById("passcode"),o=document.getElementById("error");t.value===i?(sessionStorage.setItem(a,"1"),d()):(o.textContent="Wrong passcode",t.value="",t.focus())}function d(){document.getElementById("gate").style.display="none",document.getElementById("board").style.display="block"}sessionStorage.getItem(a)==="1"&&d();document.getElementById("unlock").addEventListener("click",l);document.getElementById("passcode").addEventListener("keydown",t=>{t.key==="Enter"&&l()});const c=document.querySelectorAll(".tab"),r=document.querySelectorAll(".card"),y=document.querySelectorAll("[data-status-count]");c.forEach(t=>{t.addEventListener("click",()=>{const o=t.dataset.project;c.forEach(e=>e.classList.remove("active")),t.classList.add("active");const s={now:0,next:0,someday:0,done:0};r.forEach(e=>{const n=o==="all"||e.dataset.project===o;if(e.style.display=n?"":"none",n){const u=e.closest(".column").querySelector("[data-status-count]").getAttribute("data-status-count");s[u]++}}),y.forEach(e=>{e.textContent=String(s[e.dataset.statusCount])})})});r.forEach(t=>{t.addEventListener("click",()=>{const o=t.querySelector(".body-full"),s=t.querySelector(".body-preview");if(!o)return;const e=t.classList.toggle("expanded");o.style.display=e?"block":"none",s&&(s.style.display=e?"none":"")})});</script> 
+<!DOCTYPE html><html lang="en" data-astro-cid-5hce7sga> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>Ideas Board</title><link rel="stylesheet" href="/mx-ideas-board-site/_astro/index.DB8I9Yz1.css"></head> <body data-astro-cid-5hce7sga>  <div id="gate" data-astro-cid-j7pv25f6> <div class="gate-box" data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Ideas Board</h1> <p data-astro-cid-j7pv25f6>Enter passcode to continue</p> <div class="code-input" data-astro-cid-j7pv25f6> <input type="password" id="passcode" maxlength="20" placeholder="passcode" autocomplete="off" data-astro-cid-j7pv25f6> <button id="unlock" data-astro-cid-j7pv25f6>Unlock</button> </div> <p id="error" class="error" data-astro-cid-j7pv25f6></p> </div> </div> <div id="board" style="display:none" data-astro-cid-j7pv25f6> <header data-astro-cid-j7pv25f6> <h1 data-astro-cid-j7pv25f6>Ideas Board</h1> <p class="subtitle" data-astro-cid-j7pv25f6>12 ideas across 1 projects</p> </header> <!-- Project tabs --> <nav class="tabs" data-astro-cid-j7pv25f6> <button class="tab active" data-project="all" data-astro-cid-j7pv25f6>All</button> <button class="tab" data-project="new-project" style="--accent: var(--text-muted)" data-astro-cid-j7pv25f6> <span class="tab-dot" data-astro-cid-j7pv25f6></span> new-project <span class="tab-count" data-astro-cid-j7pv25f6>12</span> </button> </nav> <!-- Kanban columns --> <main data-astro-cid-j7pv25f6> <section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--text-muted)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Raw</h2> <span class="count" data-status-count="raw" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--someday)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Assessed</h2> <span class="count" data-status-count="assessed" data-astro-cid-j7pv25f6> 12 </span> </div> <div class="cards" data-astro-cid-j7pv25f6> <article class="card" data-project="new-project" data-id="agent-guard" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AgentGuard</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~2 weeks · $50/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~2 weeks · $50/mo · Build it</p>
+<p>AI coding tools write more production code than ever but trust is the bottleneck. The community is converging on specs-first approaches (242pts HN), and products like Vet (111 votes PH) and Context Gateway (209 votes PH) validate demand. Theme strong for 4 consecutive days.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: SaaS: $29/mo indie (50 PRs), $99/mo teams (unlimited), $499/mo enterprise with custom rules and compliance reports.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Trust in AI-generated code is the #1 adoption bottleneck — this directly addresses it</li>
+<li>Theme trending 4 consecutive days with strong HN and PH signals</li>
+<li>Specs-first approach is a differentiated angle vs existing code review tools</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Vet (111 votes PH) already addresses &quot;keeping coding agents honest&quot; — competitive</li>
+<li>Tuning prompts for low false-positive rates is hard and ongoing</li>
+<li>Enterprise sales cycle may be slow for indie builder</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47283337">LLMs work best when the user defines their acceptance criteria first (242pts)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=47282777">I&#39;m 60 years old. Claude Code has re-ignited a passion (489pts)</a></li>
+<li><a href="https://www.producthunt.com/posts/imbue-7">Vet - Keep your coding agents honest (111 votes PH)</a></li>
+<li><a href="https://www.producthunt.com/posts/context-gateway">Context Gateway - Make Claude Code faster and cheaper (209 votes PH)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Post in r/ExperiencedDevs: &#39;How do you review AI-generated PRs at scale?&#39;</li>
+<li>Build a GitHub Action that runs Claude on PR diffs and posts review comments -- share as open source</li>
+<li>Comment on the &#39;LLMs work best when user defines acceptance criteria&#39; HN thread with a prototype</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, Auth, AI/LLM API, GitHub API, Background jobs
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="agent-mem" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AgentMem</h3> <p class="body-preview" data-astro-cid-j7pv25f6>8/10 · ~1-2 weeks · $25/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>8/10 · ~1-2 weeks · $25/mo · Build it</p>
+<p>AI agents forget everything between sessions. DeerFlow (&#39;SuperAgent with memories&#39;) trending 4th day (+3480/week). hermes-agent (&#39;grows with you&#39;, +964/week). Every agent framework needs a memory layer but none ship one. The gap is widening as adoption accelerates.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Usage-based: 10K memories free, $19/mo for 100K, $79/mo for 1M with priority retrieval and analytics.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 1-2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Clear infrastructure gap — every agent framework needs this but none include it</li>
+<li>API-centric product is straightforward to build (Hono + pgvector)</li>
+<li>Usage-based pricing scales well with adoption</li>
+<li>Theme trending 4 consecutive days</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Mem0 and Zep are existing solutions, though not agent-framework-specific</li>
+<li>Vector search quality at scale requires tuning</li>
+<li>Memory consolidation (deciding what to keep/forget) is a hard problem</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://github.com/bytedance/deer-flow">DeerFlow - SuperAgent with memories (4th day trending, +3480/week)</a></li>
+<li><a href="https://github.com/NousResearch/hermes-agent">Hermes Agent - The agent that grows with you (+964/week)</a></li>
+<li><a href="https://github.com/agentscope-ai/agentscope">AgentScope - Build trustworthy agents (+1120/week)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Build a simple API with Hono + pgvector, offer free access to 50 agent developers</li>
+<li>Post in Claude Code and Cursor communities: &#39;Would you pay for persistent memory for your AI agents?&#39;</li>
+<li>Write a blog comparing memory solutions (Mem0, Zep, custom pgvector) and share on HN</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, Auth, AI/LLM API, Background jobs
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="agent-orch" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>AgentOrch</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~2-3 weeks · $30/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~2-3 weeks · $30/mo · Build it</p>
+<p>Agent framework explosion creating chaos — openai/skills (+947), ruflo (+4170/week), deer-flow (+3480/week), agentscope (+1120/week), hermes-agent (+964/week). No unified way to orchestrate agents across frameworks. Theme strong for 4 consecutive days.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Open-core: free CLI for local orchestration, $49/mo hosted with dashboards and CI integration, $199/mo for team features with production monitoring.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 2-3 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Every company building their own agent stack but no interop layer exists</li>
+<li>Testing agents is also unsolved (TestSprite 2.1, 123 votes PH validates this)</li>
+<li>Theme trending 4 consecutive days with accelerating signal</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Agent SDKs are changing rapidly — adapter maintenance could be a treadmill</li>
+<li>Large players (LangChain, OpenAI) could build this natively</li>
+<li>Medium complexity with real-time WebSocket dashboard adds scope</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://github.com/openai/skills">OpenAI Skills Catalog for Codex (+947 stars today)</a></li>
+<li><a href="https://github.com/ruvnet/ruflo">Ruflo - Agent orchestration for Claude (+4170 stars/week)</a></li>
+<li><a href="https://github.com/bytedance/deer-flow">DeerFlow - ByteDance SuperAgent (+3480 stars/week)</a></li>
+<li><a href="https://www.producthunt.com/posts/testsprite">TestSprite 2.1 - Agentic testing (123 votes PH)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Build a CLI that orchestrates 2-3 agents from different frameworks and share as Show HN</li>
+<li>Post in r/LocalLLaMA: &#39;How do you coordinate multiple AI agents in a single workflow?&#39;</li>
+<li>Cold DM 10 developers starring agent framework repos on GitHub</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, Auth, AI/LLM API, Background jobs, Real-time/WebSockets
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="claude-forge" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>ClaudeForge</h3> <p class="body-preview" data-astro-cid-j7pv25f6>9/10 · ~1 week · $15/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>9/10 · ~1 week · $15/mo · Build it</p>
+<p>Claude Code spawning its own ecosystem. Context Gateway (209 votes PH), 21st Agents SDK (89 votes PH), learn-claude-code (22.9K stars), webnovel-writer (+291 today), seomachine (+378 today), ruflo (+4170/week). No marketplace for Claude Code plugins, skills, and templates.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free registry with community plugins, $15/mo for premium plugins (enterprise templates, specialized workflows), $49/mo for teams with shared configurations.
+<strong>Domain fit</strong>: Web app — core expertise (we build Claude Code plugins daily)
+<strong>Build speed</strong>: 1 week to MVP, low complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Direct domain expertise — we&#39;re already building Claude Code plugins and workflows</li>
+<li>Low complexity, fast build, minimal infrastructure costs</li>
+<li>First-mover in a rapidly growing ecosystem with no existing marketplace</li>
+<li>Community-driven model creates network effects</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Anthropic could build an official plugin marketplace</li>
+<li>Claude Code plugin format may change, breaking compatibility</li>
+<li>Small market initially — depends on Claude Code adoption continuing</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://www.producthunt.com/posts/context-gateway">Context Gateway - Make Claude Code faster and cheaper (209 votes PH)</a></li>
+<li><a href="https://www.producthunt.com/posts/21st-dev-the-npm-for-design-engineers">21st Agents SDK - Add Claude Code AI agent to your app (89 votes PH)</a></li>
+<li><a href="https://github.com/shareAI-lab/learn-claude-code">Learn Claude Code - Build agents from scratch (22.9K stars)</a></li>
+<li><a href="https://github.com/lingfengQAQ/webnovel-writer">webnovel-writer - Claude Code for long-form writing (+291 today)</a></li>
+<li><a href="https://github.com/TheCraigHewitt/seomachine">SEOMachine - Claude Code for SEO content (+378 today)</a></li>
+<li><a href="https://github.com/ruvnet/ruflo">Ruflo - Agent orchestration for Claude (+4170/week)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Create a GitHub repo with 20 curated CLAUDE.md templates and slash commands, share in Claude Code communities</li>
+<li>Post in r/ClaudeAI: &#39;What&#39;s your Claude Code setup? Share your CLAUDE.md and custom commands&#39;</li>
+<li>Build a simple CLI that installs slash commands from a registry and share as Show HN</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: CLI tool, Web app, Database
+Complexity: low
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="code-atlas" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>CodeAtlas</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~2-3 weeks · $15/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~2-3 weeks · $15/mo · Build it</p>
+<p>GitNexus has trended on GitHub for 4 straight weeks (+4419 stars/week, 10.6K total) — the most persistent single-project signal in the dataset. Developers want visual codebase understanding but GitNexus is raw OSS with no polish, team features, or monetization.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free for repos under 10K LOC, $15/mo unlimited, $49/mo for team features (shared annotations, onboarding guides).
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 2-3 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>GitNexus&#39;s 4-week persistence proves sustained demand, not a fad</li>
+<li>Visual codebase understanding directly helps onboarding — clear pain point</li>
+<li>Reference implementation exists (GitNexus) reducing technical risk</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>VS Code extension development may require specialized knowledge</li>
+<li>GitNexus could polish up and capture the market directly</li>
+<li>Graph generation quality depends on parsing heuristics that vary by language</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://github.com/abhigyanpatwari/GitNexus">GitNexus - Code Intelligence Engine (4th week trending, +4419/week)</a></li>
+<li><a href="https://github.com/shareAI-lab/learn-claude-code">Learn Claude Code - Build agents from scratch (22.9K stars, +3167/week)</a></li>
+<li><a href="https://www.producthunt.com/posts/fastergh">FasterGH - Fast GitHub browsing (95 votes PH)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Fork GitNexus, add a polished UI and chat feature, share as Show HN</li>
+<li>Survey 20 senior devs: &#39;How long does it take you to understand a new codebase?&#39;</li>
+<li>Build a VS Code extension MVP and list on the marketplace</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, AI/LLM API
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="downturn-kit" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>DownturnKit</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~1 weekend · $10/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~1 weekend · $10/mo · Build it</p>
+<p>&#39;Tech employment now significantly worse than 2008 or 2020 recessions&#39; hit 904pts with 600 comments on HN — highest-scoring story today. Laid-off developers need tools to quickly monetize skills as indie hackers, not more job boards.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: One-time purchase: $49 for the full kit. $19/mo for weekly updated idea briefs with trend data. $99 for 1-on-1 launch review.
+<strong>Domain fit</strong>: Static site — simple build
+<strong>Build speed</strong>: 1 weekend to MVP, low complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Massive emotional signal (904pts, 600 comments) — people are actively looking for solutions</li>
+<li>Content-first product with minimal technical risk</li>
+<li>Can leverage our own trend engine data as a unique differentiator</li>
+<li>Very low cost to build and validate</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>One-time purchase model limits revenue potential</li>
+<li>Content requires ongoing curation to stay valuable</li>
+<li>Recession sentiment may be temporary — trend could fade</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47278426">Tech employment now significantly worse than 2008 or 2020 recessions (904pts, 600 comments)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=47278980">Palus Finance (YC W26) - Better yields on idle cash for startups (52pts)</a></li>
+<li><a href="https://www.apple.com/macbook-neo/">MacBook Neo trending under &#39;cheap laptop&#39; on Google Trends</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Comment on the tech employment HN thread: &#39;Would a structured 30-day playbook for launching a side project be valuable?&#39;</li>
+<li>Post in r/cscareerquestions: &#39;Laid off? Here are 10 validated side project ideas you can build this month&#39; with a waitlist</li>
+<li>Create a free sample playbook for one idea and track downloads</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Static site
+Complexity: low
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="mcp-hub" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>MCPHub</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~2 weeks · $30/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~2 weeks · $30/mo · Build it</p>
+<p>MCP becoming de facto standard for AI agent integrations but ecosystem is fragmented. Xiaohongshu MCP still trending (+1114/week). Microsoft released hve-core for Copilot skills (+217 today). No registry, quality layer, or discovery mechanism exists.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free public registry, $19/mo for premium servers (enterprise integrations), $79/mo for teams with private registry and security scanning.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>MCP ecosystem growing rapidly with no central registry — first-mover advantage</li>
+<li>Registry/marketplace model has proven economics (npm, VS Code marketplace)</li>
+<li>Testing sandbox is a strong differentiator</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Anthropic or another large player could build an official registry</li>
+<li>Compatibility testing across MCP clients is complex</li>
+<li>Early-stage ecosystem — total addressable market still small</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://github.com/xpzouying/xiaohongshu-mcp">Xiaohongshu MCP (+1114 stars/week, 10.6K total)</a></li>
+<li><a href="https://github.com/microsoft/hve-core">Microsoft HVE Core - Copilot skills, prompts, agents (+217 today)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Scrape existing MCP servers from GitHub and build a searchable directory -- share in Claude Code and Cursor communities</li>
+<li>Post in r/LocalLLaMA: &#39;How do you discover and evaluate MCP servers?&#39;</li>
+<li>Build a &#39;try before you install&#39; sandbox and share as Show HN</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, Auth, Background jobs
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="open-weight" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>OpenWeight</h3> <p class="body-preview" data-astro-cid-j7pv25f6>6/10 · ~2-3 weeks · $50/mo · Maybe</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>6/10 · ~2-3 weeks · $50/mo · Maybe</p>
+<p>Open-weight model ecosystem maturing. Sarvam 105B (first competitive Indian open source LLM, 59pts HN), OBLITERATUS (173pts HN). Discovering, comparing, and deploying these models is still fragmented, but requires ML knowledge beyond web dev.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free comparisons and local deployment guides, $29/mo for automated deployment and monitoring, $99/mo for fine-tuning pipeline and team model registry.
+<strong>Domain fit</strong>: Out-of-box — requires GPU/ML infrastructure knowledge
+<strong>Build speed</strong>: 2-3 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Growing demand for non-English and uncensored models not on mainstream platforms</li>
+<li>Comparison tool fills a real gap for model selection</li>
+<li>Open-weight ecosystem is maturing and gaining momentum</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>GPU/ML infrastructure requires specialized knowledge outside web dev core</li>
+<li>Higher operational costs ($50/mo for benchmarks)</li>
+<li>Hugging Face and Ollama already provide some of this functionality</li>
+<li>Model landscape changes very rapidly</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47285422">Sarvam 105B - First competitive Indian open source LLM (59pts)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=47275291">OBLITERATUS - Remove censorship from open-weight LLMs (173pts, 78 comments)</a></li>
+<li><a href="https://github.com/inclusionAI/AReaL">AReaL - RL for LLM Reasoning (+238 today)</a></li>
+<li><a href="https://github.com/QwenLM/Qwen-Agent">Qwen-Agent framework (+586 today)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Build a web tool that lets you compare 5 open-weight models on custom prompts and share on HN</li>
+<li>Post in r/LocalLLaMA: &#39;What&#39;s your process for choosing between open-weight models?&#39;</li>
+<li>Create a &#39;non-English LLM leaderboard&#39; and share with international AI communities</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, Auth, GPU/ML infra, CLI tool
+Complexity: medium
+AI build viability: medium</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="security-pilot" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>SecurityPilot</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~2 weeks · $40/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~2 weeks · $40/mo · Build it</p>
+<p>AI-powered security testing breakout day. CyberStrikeAI (+416 stars today), &#39;Hardening Firefox with Anthropic&#39;s Red Team&#39; (572pts HN), Codex Security (89 votes PH). Theme evolved from &#39;prevent leaks&#39; to &#39;use AI offensively for security testing&#39;.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: free for 1 scan/week on public repos, $19/mo for unlimited scans with remediation PRs, $79/mo for teams with scheduled scans and Slack alerts.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Security testing logic is well-understood (OWASP ZAP, Semgrep) — AI adds prioritization</li>
+<li>Priced for indie devs, not enterprises — underserved segment</li>
+<li>Theme trending 4 consecutive days with expanding scope</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Security tools require high trust and credibility to sell</li>
+<li>False positives in security scanning erode user trust quickly</li>
+<li>Liability concerns with AI-generated security recommendations</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://github.com/Ed1s0nZ/CyberStrikeAI">CyberStrikeAI - AI-native security testing platform (+416 stars today)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=47273854">Hardening Firefox with Anthropic&#39;s Red Team (572pts, 156 comments)</a></li>
+<li><a href="https://www.producthunt.com/posts/codex-security">Codex Security - Application security agent (89 votes PH)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Build a free scanner that checks a URL for OWASP Top 10 issues and share as Show HN</li>
+<li>Comment on the &#39;Hardening Firefox with Anthropic&#39;s Red Team&#39; HN thread asking what tools small teams use</li>
+<li>Post in r/netsec: &#39;What security scanning tools do you use for side projects?&#39;</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, Auth, AI/LLM API, GitHub API, Background jobs
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="scrape-forge" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>ScrapeForge</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~1-2 weeks · $40/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~1-2 weeks · $40/mo · Build it</p>
+<p>Web scraping demand intensifying. D4Vinci&#39;s framework exploded to +7173 stars/week (25.2K total). SEOMachine still trending (+378 today). Every AI app needs structured data from websites without APIs, and existing tools are too complex or expensive.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Usage-based: 1000 free extractions/mo, $29/mo for 10K, $99/mo for 100K, enterprise with dedicated proxies.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 1-2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Massive proven demand (7K+ stars/week on scraping framework)</li>
+<li>Natural language → structured JSON is a compelling UX differentiator</li>
+<li>Self-hostable Docker option captures privacy-conscious segment</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Legal grey area — website ToS violations and anti-scraping laws</li>
+<li>Anti-bot measures are an ongoing arms race</li>
+<li>Competing with established players (Apify, ScrapingBee, Browserbase)</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://github.com/D4Vinci">Adaptive Web Scraping framework (+7173 stars/week, 25.2K total)</a></li>
+<li><a href="https://github.com/TheCraigHewitt/seomachine">SEOMachine - Claude Code for SEO content (+378 stars today)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Build a simple API that takes URL + prompt and returns JSON, post on HN as Show HN</li>
+<li>List on RapidAPI marketplace and track signups for 2 weeks</li>
+<li>Post in r/dataengineering: &#39;What websites do you wish had APIs?&#39;</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, AI/LLM API, Background jobs, Auth
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="vibe-ship" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>VibeShip</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~2 weeks · $30/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~2 weeks · $30/mo · Build it</p>
+<p>Vibe coding expanding beyond professional developers. &#39;60 years old, Claude Code re-ignited a passion&#39; (489pts, 355 comments HN). Non-traditional builders can create apps with AI but have no idea how to deploy, host, or maintain them.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: 1 free project on subdomain, $12/mo for custom domain + 3 projects, $39/mo for 10 projects with analytics and error-to-AI pipeline.
+<strong>Domain fit</strong>: Web app — core expertise
+<strong>Build speed</strong>: 2 weeks to MVP, medium complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Massive underserved audience — non-devs building with AI who can&#39;t deploy</li>
+<li>&quot;Error-to-AI&quot; feature is a compelling differentiator</li>
+<li>Auto-detect framework + one-click deploy is a strong UX story</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Competing with Vercel, Railway, Netlify who have massive head starts</li>
+<li>Hosting infrastructure is operationally complex to maintain</li>
+<li>Target audience (non-devs) may have low willingness to pay</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://news.ycombinator.com/item?id=47282777">I&#39;m 60 years old. Claude Code has re-ignited a passion (489pts, 355 comments)</a></li>
+<li><a href="https://www.producthunt.com/posts/cochat">CoChat - Collaborative AI for teams (266 votes PH)</a></li>
+<li><a href="https://www.producthunt.com/posts/cockpit-3">Cockpit - VPS as desktop-like interface (95 votes PH)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Reply to the &#39;60 years old, Claude Code&#39; HN thread asking &#39;What happens after you build something? How do you get it online?&#39;</li>
+<li>Post in r/nocode: &#39;I built something with Claude Code but can&#39;t deploy it -- anyone else?&#39;</li>
+<li>Build a landing page targeting &#39;deploy vibe coded app&#39; keywords</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: Web app, Database, Auth, AI/LLM API, Background jobs
+Complexity: medium
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article><article class="card" data-project="new-project" data-id="writer-forge" style="--card-accent: var(--border)" data-astro-cid-j7pv25f6> <div class="card-top" data-astro-cid-j7pv25f6> <span class="project-tag" data-astro-cid-j7pv25f6>new-project</span> <time data-astro-cid-j7pv25f6>8 Mar</time> </div> <h3 data-astro-cid-j7pv25f6>WriterForge</h3> <p class="body-preview" data-astro-cid-j7pv25f6>7/10 · ~1 week · $15/mo · Build it</p> <div class="body-full" style="display:none" data-astro-cid-j7pv25f6><p>7/10 · ~1 week · $15/mo · Build it</p>
+<p>Claude Code being repurposed for non-code creative work. webnovel-writer (+291 stars today) solves forgetting in 2M+ character serialized fiction. SEOMachine (+378 today) does the same for marketing content. These prove Claude Code&#39;s agent loop is valuable beyond coding.</p>
+<hr>
+<h2>Assessment</h2>
+<p><strong>Revenue</strong>: Freemium: 3 free templates, $29/mo for all templates with premium features (multi-chapter memory, SEO scoring, tone analysis), $79/mo for teams with shared style guides.
+<strong>Domain fit</strong>: CLI tool — core expertise (prompt engineering and workflow design)
+<strong>Build speed</strong>: 1 week to MVP, low complexity</p>
+<h3>Why build</h3>
+<ul>
+<li>Proven demand for Claude Code beyond coding (webnovel-writer, SEOMachine)</li>
+<li>Core value is prompt engineering and workflow design — our strength</li>
+<li>Low complexity, fast build, template-based model</li>
+</ul>
+<h3>Risks</h3>
+<ul>
+<li>Overlaps with ClaudeForge concept — may cannibalize</li>
+<li>Writers may not adopt developer-style CLI tools</li>
+<li>Content quality depends heavily on prompt engineering quality</li>
+</ul>
+<h3>Evidence</h3>
+<ul>
+<li><a href="https://github.com/lingfengQAQ/webnovel-writer">webnovel-writer - Claude Code for 2M+ character serialized fiction (+291 today)</a></li>
+<li><a href="https://github.com/TheCraigHewitt/seomachine">SEOMachine - Claude Code for SEO content (+378 today)</a></li>
+<li><a href="https://news.ycombinator.com/item?id=47282777">I&#39;m 60 years old. Claude Code has re-ignited a passion (489pts)</a></li>
+</ul>
+<h3>Validation Steps</h3>
+<ul>
+<li>Create a free Claude Code fiction writing template and share in writing communities</li>
+<li>Post in r/writing: &#39;I built an AI writing workspace that remembers your characters across 50+ chapters&#39;</li>
+<li>DM 10 content creators asking about their AI writing workflow pain points</li>
+</ul>
+<h3>Technical Notes</h3>
+<p>Stack: CLI tool, Static site
+Complexity: low
+AI build viability: high</p>
+<p>Assessed 2026-03-08 by /pipeline:ingest from 2026-03-07 report</p>
+</div> </article> </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--next)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Vetted</h2> <span class="count" data-status-count="vetted" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--now)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Building</h2> <span class="count" data-status-count="building" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: var(--done)" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Shipped</h2> <span class="count" data-status-count="shipped" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section><section class="column" data-astro-cid-j7pv25f6> <div class="column-header" style="--col-color: #6e7681" data-astro-cid-j7pv25f6> <span class="dot" data-astro-cid-j7pv25f6></span> <h2 data-astro-cid-j7pv25f6>Rejected</h2> <span class="count" data-status-count="rejected" data-astro-cid-j7pv25f6> 0 </span> </div> <div class="cards" data-astro-cid-j7pv25f6>  </div> </section> </main> </div>  </body></html> <script type="module">const i="eitaaio",a="ideas-board-auth";function l(){const t=document.getElementById("passcode"),s=document.getElementById("error");t.value===i?(sessionStorage.setItem(a,"1"),d()):(s.textContent="Wrong passcode",t.value="",t.focus())}function d(){document.getElementById("gate").style.display="none",document.getElementById("board").style.display="block"}sessionStorage.getItem(a)==="1"&&d();document.getElementById("unlock").addEventListener("click",l);document.getElementById("passcode").addEventListener("keydown",t=>{t.key==="Enter"&&l()});const c=document.querySelectorAll(".tab"),r=document.querySelectorAll(".card"),y=document.querySelectorAll("[data-status-count]");c.forEach(t=>{t.addEventListener("click",()=>{const s=t.dataset.project;c.forEach(e=>e.classList.remove("active")),t.classList.add("active");const o={raw:0,assessed:0,vetted:0,building:0,shipped:0,rejected:0};r.forEach(e=>{const n=s==="all"||e.dataset.project===s;if(e.style.display=n?"":"none",n){const u=e.closest(".column").querySelector("[data-status-count]").getAttribute("data-status-count");o[u]++}}),y.forEach(e=>{e.textContent=String(o[e.dataset.statusCount])})})});r.forEach(t=>{t.addEventListener("click",()=>{const s=t.querySelector(".body-full"),o=t.querySelector(".body-preview");if(!s)return;const e=t.classList.toggle("expanded");s.style.display=e?"block":"none",o&&(o.style.display=e?"none":"")})});</script> 
